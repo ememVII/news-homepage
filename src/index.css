@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+
+:root {
+  --soft-orange: hsl(35, 77%, 62%);
+  --soft-red: hsl(5, 85%, 63%);
+  --off-white: hsl(36, 100%, 99%);
+  --grayish-blue: hsl(233, 8%, 79%);
+  --dark-grayish-blue: hsl(236, 13%, 42%);
+  --very-dark-blue: hsl(240, 100%, 5%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--off-white);
+  overflow-x: hidden;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  cursor: pointer;
+  color: var(--dark-grayish-blue);
+  transition: 0.2s ease-in;
+  font-weight: 500 !important;
+}
+
+li:hover {
+  color: var(--soft-red);
+}
+
+a, a:hover {
+  text-decoration: none;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.align-center {
+  display: flex;
+  align-items: center;
+}
+
+body header::after {
+  content: '';
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  inset: 0;
+  transform: translateX(100%);
+  transition-delay: 250ms;
+  transition: background-color 250ms ease-in-out;
+  z-index: 0;
+}
+
+@media (max-width: 767px) {
+  body.lock-scroll header::after {
+    transform: translateX(0);
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+}
+
+body.lock-scroll {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.attribution {
+  margin-top: 7rem !important;
+}
+.attribution a {
+  color: var(--dark-grayish-blue);
+  transition: 0.3s ease;
+}
+
+.attribution a:hover {
+  color: var(--soft-red);
+}

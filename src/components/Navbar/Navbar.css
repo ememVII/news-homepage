@@ -1,0 +1,32 @@
+@media (max-width: 767px) {
+    .links {
+        position: absolute;
+        flex-direction: column;
+        top: 0;
+        right: -100%;
+        transition: 200ms ease;
+    }
+    
+    .burgerMenu {
+        position: absolute;
+        top: 1.25rem;
+        right: 1.25rem;
+        z-index: 2;
+    }
+    
+    .linksShow {
+        padding-top: 5rem;
+        height: 100vh;
+        width: 50%;
+        background-color: #fff;
+        z-index: 1;
+        right: 0;
+        font-size: 1.25rem;
+    }
+}
+
+@media (min-width: 767px) {
+    .burgerMenu {
+        display: none;
+    }
+}
